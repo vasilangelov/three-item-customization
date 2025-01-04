@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThreeJS Custom Print Preview</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="canvas-container"></div>
+
+      <div id="controls">
+        <h1>Custom Print Preview</h1>
+        <p>
+          This app allows you to preview custom prints on available models
+          before you purchase them.
+        </p>
+
+        <section>
+          <h2>Chose Preview Model</h2>
+
+          <div>
+            <input
+              id="model-cup"
+              type="radio"
+              name="model"
+              value="cup"
+              checked
+            />
+            <label for="model-cup">Cup</label>
+          </div>
+          <div>
+            <input
+              id="model-cushion"
+              type="radio"
+              name="model"
+              value="cushion"
+            />
+            <label for="model-cushion">Cushion</label>
+          </div>
+        </section>
+
+        <div>
+          <label for="color-change">Material Color</label>
+          <input id="color-change" type="color" value="#ffffff" />
+        </div>
+
+        <div>
+          <label for="image-upload">Upload Image</label>
+          <input
+            id="image-upload"
+            type="file"
+            accept="image/png,image/jpeg,image/jpg,image/webp"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
