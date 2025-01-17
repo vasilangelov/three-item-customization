@@ -32,8 +32,10 @@ jobs:
           node-version: "22.12.0"
       - name: Install dependencies
         run: npm install
-      - name: Set environment variables
-        run: export BASE_URL="/{{ github.repository }}"
+      - name: Create .env file
+        run: |
+          touch .env
+          echo BASE_URL=${{ github.repository }} >> .env
       - name: Build
         run: npm run build
       - name: Upload artifact
