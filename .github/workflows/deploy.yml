@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Set environment variables
-        run: export BASE_URL=/{{ github.repository }}
+        run: export BASE_URL="/{{ github.repository }}"
       - name: Build
         run: npm run build
       - name: Upload artifact
