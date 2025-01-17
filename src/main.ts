@@ -6,6 +6,8 @@ import { SETTINGS } from "./settings";
 
 import "./style.css";
 
+const BASE_URL = import.meta.env.VITE_BASE_URL || "";
+
 const Elements = {
   getCanvasContainer: () => document.getElementById("canvas-container"),
   getModelRadioInputs: () => document.querySelectorAll("input[name='model']"),
@@ -119,7 +121,7 @@ async function loadGLTFObject(name: string) {
 
   if (!ModelCache.has(name)) {
     const mesh = await loader
-      .loadAsync(`/models/${name}.glb`)
+      .loadAsync(`${BASE_URL}/models/${name}.glb`)
       .then((gltf) => gltf.scene.children[0]);
 
     if (mesh instanceof THREE.Mesh) {

@@ -1,5 +1,7 @@
 # three-item-customization
 
+The application is live on https://vasilangelov.github.io/three-item-customization
+
 ## How to setup?
 
 1. Have `Node.js` LTS installed.
